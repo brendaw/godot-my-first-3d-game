@@ -26,7 +26,9 @@ script = ExtResource( 2 )
 mob_scene = ExtResource( 3 )
 
 [node name="Ground" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.87585, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.86512, 0 )
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
 shape = SubResource( 1 )
@@ -40,7 +42,7 @@ transform = Transform( 1, 0, 0, 0, 0.393717, 0.919232, 0, -0.919232, 0.393717, 0
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.01269, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00196, 0 )
 
 [node name="CameraPivot" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.499788, 0.866148, 0, -0.866148, 0.499788, 0.758595, -3.81139, -2.12618 )
@@ -51,6 +53,7 @@ projection = 1
 size = 17.53
 
 [node name="Cylinders" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.01073, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Cylinders"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2137, -7.71255, -14.0744 )
@@ -73,10 +76,11 @@ mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
 
 [node name="SpawnPath" type="Path" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.25928, 0 )
 curve = SubResource( 5 )
 
 [node name="SpawnLocation" type="PathFollow" parent="SpawnPath"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.29919, 0.00828362, -10.402 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.29919, -10.8481, -10.402 )
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
